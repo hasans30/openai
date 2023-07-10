@@ -4,7 +4,7 @@ Project with openai
 Run following command
 `node multidoc.js "when did I go to Delhi?"`
 
-output
+output without considering knowledge vs. output with considering knowledge base
 ```
 calling model directly:
 
