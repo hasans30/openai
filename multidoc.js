@@ -41,7 +41,14 @@ const retriever = vectorStore.asRetriever();
 
 const model = new OpenAI({
   modelName: "text-davinci-003",
+  temperature: 0.9,
 });
+
+//use the model directly
+const response = await model.call(queryText);
+console.log(`calling model directly: ${response ?? "no answer returned"}`);
+
+// model with retrival qa chain with personal knowledge base
 const chain = RetrievalQAChain.fromLLM(model, retriever);
 const res = await chain.call({
   query: queryText,
