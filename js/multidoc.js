@@ -11,7 +11,7 @@ import "dotenv/config";
 const queryText = process.argv.slice(2).join(" ");
 console.log(`searching for...`, queryText);
 
-const loader = new DirectoryLoader("./new_articles/", {
+const loader = new DirectoryLoader("../new_articles/", {
   ".txt": (path) => new TextLoader(path),
 });
 
