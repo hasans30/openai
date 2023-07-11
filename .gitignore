@@ -292,3 +292,10 @@ dist
 .idea
 # Dependency directory
 bower_components
+
+*.exe
+
+__pycache__/*
+include/*
+Lib/*
+Scripts/*
